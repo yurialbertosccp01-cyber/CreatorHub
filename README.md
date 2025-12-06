@@ -1,6 +1,185 @@
-# Creator Hub
+# 🎬 Creator Hub
 
-Uma plataforma de entretenimento completa com filmes, séries, animes e jogos exclusivos.
+Uma plataforma moderna para criadores de conteúdo compartilharem e descobrirem filmes, séries, animes e jogos.
+
+![Creator Hub](https://img.shields.io/badge/React-18.2.0-blue)
+![Vite](https://img.shields.io/badge/Vite-4.4.5-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## 🌟 Funcionalidades
+
+- ✅ **Sistema de Autenticação** - Login seguro com credenciais de teste
+- ✅ **Navegação Intuitiva** - Seções organizadas para Filmes, Séries, Animes e Jogos
+- ✅ **Sistema de Busca** - Busca inteligente por conteúdo
+- ✅ **Publicação de Conteúdo** - Modal para criadores publicarem novo conteúdo
+- ✅ **Interface Responsiva** - Design moderno e adaptável
+- ✅ **Notificações** - Sistema de notificações integrado
+
+## 🚀 Demo Online
+
+**URL:** [Creator Hub Demo](https://work-1-mvuuuupskumwimgm.prod-runtime.all-hands.dev)
+
+### 🔑 Credenciais de Teste:
+- **Email:** teste@creatorhub.com
+- **Senha:** 123456
+
+## 📱 Como Executar no Android Studio
+
+### Pré-requisitos
+
+1. **Android Studio** (versão mais recente)
+2. **Node.js** (versão 16 ou superior)
+3. **Git** instalado
+
+### 📋 Passo a Passo Completo
+
+#### 1️⃣ **Clone o Repositório**
+
+```bash
+git clone https://github.com/yurialbertosccp01-cyber/CreatorHub.git
+cd CreatorHub
+```
+
+#### 2️⃣ **Instale as Dependências**
+
+```bash
+npm install
+```
+
+#### 3️⃣ **Configure o Android Studio**
+
+1. **Abra o Android Studio**
+2. **Vá em File → Settings (ou Android Studio → Preferences no macOS)**
+3. **Navegue até Tools → Terminal**
+4. **Configure o Shell path para usar o terminal do sistema**
+
+#### 4️⃣ **Abra o Projeto no Android Studio**
+
+1. **File → Open**
+2. **Selecione a pasta `CreatorHub`**
+3. **Clique em OK**
+
+#### 5️⃣ **Configure o Terminal Integrado**
+
+1. **Abra o Terminal no Android Studio** (View → Tool Windows → Terminal)
+2. **Navegue até a pasta do projeto:**
+   ```bash
+   cd CreatorHub
+   ```
+
+#### 6️⃣ **Execute o Projeto**
+
+```bash
+npm run dev
+```
+
+#### 7️⃣ **Acesse a Aplicação**
+
+- **URL Local:** http://localhost:12000
+- **URL de Rede:** http://[SEU_IP]:12000
+
+### 🔧 **Configuração Avançada para Android Studio**
+
+#### **Configurar Scripts no Android Studio:**
+
+1. **Vá em Run → Edit Configurations**
+2. **Clique no + e selecione "npm"**
+3. **Configure os seguintes scripts:**
+
+**Script de Desenvolvimento:**
+- **Name:** Creator Hub - Dev
+- **Command:** run
+- **Scripts:** dev
+- **Package.json:** [caminho para seu package.json]
+
+**Script de Build:**
+- **Name:** Creator Hub - Build
+- **Command:** run
+- **Scripts:** build
+- **Package.json:** [caminho para seu package.json]
+
+**Script de Preview:**
+- **Name:** Creator Hub - Preview
+- **Command:** run
+- **Scripts:** preview
+- **Package.json:** [caminho para seu package.json]
+
+#### **Configurar Live Reload:**
+
+1. **Instale a extensão "Live Edit" no Android Studio**
+2. **O arquivo `vite.config.js` já está configurado para hot reload:**
+
+```javascript
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 12000,
+    allowedHosts: [
+      'work-1-mvuuuupskumwimgm.prod-runtime.all-hands.dev',
+      'localhost',
+      '127.0.0.1'
+    ]
+  }
+})
+```
+
+### 🛠️ **Comandos Úteis**
+
+```bash
+# Instalar dependências
+npm install
+
+# Executar em modo desenvolvimento
+npm run dev
+
+# Fazer build para produção
+npm run build
+
+# Visualizar build de produção
+npm run preview
+
+# Verificar dependências desatualizadas
+npm outdated
+
+# Atualizar dependências
+npm update
+```
+
+### 🐛 **Solução de Problemas Comuns**
+
+#### **Erro de Porta em Uso:**
+```bash
+# Matar processo na porta 12000
+npx kill-port 12000
+
+# Ou usar porta diferente
+npm run dev -- --port 3001
+```
+
+#### **Erro de Dependências:**
+```bash
+# Limpar cache e reinstalar
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### **Erro de Permissão (Linux/Mac):**
+```bash
+sudo chown -R $(whoami) ~/.npm
+```
+
+### 📱 **Testando no Dispositivo Móvel**
+
+1. **Conecte seu dispositivo na mesma rede WiFi**
+2. **Execute o projeto:**
+   ```bash
+   npm run dev
+   ```
+3. **Acesse pelo IP da máquina:**
+   ```
+   http://[SEU_IP]:12000
+   ```
 
 ## 🚀 Versões Disponíveis
 
@@ -37,7 +216,7 @@ npm run dev
 npm run build
 ```
 
-A aplicação estará disponível em `http://localhost:5173`
+A aplicação estará disponível em `http://localhost:12000`
 
 ### Versão Mobile
 
@@ -179,8 +358,8 @@ CreatorHub/
 
 ### Web
 1. Execute `npm run dev`
-2. Acesse `http://localhost:5173`
-3. Teste o login (qualquer email/senha funciona)
+2. Acesse `http://localhost:12000`
+3. Teste o login com as credenciais: teste@creatorhub.com / 123456
 4. Navegue pelo dashboard
 5. Teste o modal de publicação
 6. Teste o logout
